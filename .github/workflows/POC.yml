@@ -10,12 +10,15 @@ on:
     branches: [ "main" ]
 
 jobs:
-  job1:
-    name: "job 1"
+  checkout:
+    name: "Checkout"
+    runs-on: ubuntu-latest
     steps:
-      -name: "Step 1"
-  build:
+      - name: "checkout"
+      - uses: actions/checkout@v3
 
+  build:
+    needs: checkout
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,7 +27,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
