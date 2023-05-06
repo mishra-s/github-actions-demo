@@ -12,7 +12,6 @@ on:
 jobs:
   print:
     name: "printtttt"
-    runs-on: ubuntu-latest
     steps:
       - name: printing something
         run: echo "Hey there! I hope you are doing well"
