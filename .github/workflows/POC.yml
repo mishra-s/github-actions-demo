@@ -11,6 +11,7 @@ on:
 
 jobs:
   print:
+    runs-on: ubuntu-latest
     name: "printtttt"
     steps:
       - name: printing something
