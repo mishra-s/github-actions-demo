@@ -17,7 +17,7 @@ jobs:
       - name: printing something
         run: echo "Hey there! I hope you are doing well"
 
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     needs: print
     strategy:
